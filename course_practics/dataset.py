@@ -41,5 +41,6 @@ b_2 = torch.full((1,1),0.05,dtype=torch.float32)
 y_pred = torch.sigmoid(torch.matmul(h1, w_2) + b_2)
 np_y = y_pred.numpy()
 print(f"{np_y.shape},{y_pred}")
+print(f"{w_1}")
 
 

@@ -1,4 +1,4 @@
-
+# https://www.kaggle.com/
 import numpy as np
 import torch
 
@@ -30,8 +30,8 @@ h1 = torch.relu((torch_coffee @ w_1) + b_1)
 '''
 np_h1 = h1.numpy()
 
-np_mui = h1.detach().numpy() - np_h1
-np_max = np.max(np.abs(np_mui))
+np_mui = h1.detach().numpy() - np_h1 # detach 是脱离计算图的计算方法
+np_max = np.max(np.abs(np_mui))# de 不接触，嘛
 
 print(f"{np_max}")
 

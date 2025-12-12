@@ -14,7 +14,7 @@ print("sample_torch_coffee 类型：", type(sample_torch_coffee))
 '''
 # 练习题 2：PyTorch 张量运算与 NumPy 互转模拟全连接神经元层的（神经网络前向传播模拟）
 torch.manual_seed(42)
-w_1 = torch.randn((2,3),dtype=torch.float32)
+w_1 = torch.randn((2,3),dtype=torch.float32)# randn 正态分布 
 b_1 = torch.full((1,3),0.1,dtype=torch.float32)
 
 h1 = torch.relu((torch_coffee @ w_1) + b_1)

@@ -1,7 +1,7 @@
 import numpy as np
 
 # make a feature = 3 ;
-w1 = np.array(1,2,3)
+w1 = np.array([1,2,3])
 # when function . Firstly thought in\output
 # 其中b也是一个nump数组向量
 def relu(z):
@@ -33,15 +33,15 @@ def Sequential(x):
     
 '''
 W = ([[11,12,13],
-    [21,22,23]]) # 1行3列，一行一行输入的 1x3
-B = np.array([[1,2,3]])# 行矩阵
+    [21,22,23]]) # 2行3列，一行一行输入的 2x3
+B = np.array([[1,2,3]])# 行矩阵 
 # 不必一个一个取
-a = np.array([[1,2,3]]) # 1x1
+a = np.array([[1,2,3]]) # 1x3,到时候需转置
 
 # 或者
 a_vector = np.array([1,2,3])
 a = a.T
 def vector_dense(a,W,B):
-    z = a @ W + B
+    z = a.T @ W + B
     out = relu(z)
     return out

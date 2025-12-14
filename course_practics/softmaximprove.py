@@ -21,8 +21,8 @@ print(f"{x2: .18f}")
 再用数值稳定的改进方案实现，并对比差异。
 '''
 # 步骤1 准备训练数据，随机生成数据
-X_train = torch.randn((100,20),dtype=d32)
-y_train = torch.randint(0,10,(100,),dtype=torch.long) # 【） so 10
+X_train = torch.randn((1000,20),dtype=d32)
+y_train = torch.randint(0,10,(1000,),dtype=torch.long) # 【） so 10
 # 1000个标签，long型（NLLLoss要求）
 
 # 构建神经网络——模型是一个对象
